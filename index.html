@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Add Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+            font-family: 'Arial', sans-serif;
+        }
+        #carousel {
+            height: 700px;
+        }
+        #carousel img {
+            transition: transform 0.5s ease-in-out;
+        }
+        #carousel img:hover {
+            transform: scale(1.05); /* Slight zoom effect on hover */
+        }
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen">
+    <!-- Header -->
+    <header class="text-center mb-8 px-4">
+        <h1 class="text-5xl md:text-7xl font-extrabold text-pink-700 fade-in">🎉 Happy Birthday! 🎉</h1>
+        <p class="text-xl md:text-3xl text-yellow-600 mt-4 fade-in">To the most amazing person who lights up every room.</p>
+        <p class="text-lg md:text-2xl text-purple-700 mt-2 fade-in font-medium">Ghaniyat Tijani Eniola</p>
+        <p class="text-md md:text-xl text-cyan-600 mt-1 fade-in italic">Nursing Student, University of Ibadan, Nigeria</p>
+        <p class="text-md md:text-xl text-blue-600 mt-1 fade-in">A Talented Video Editor 🎥✨</p>
+    </header>
+
+    <div id="carousel" class="relative w-4/5 md:w-3/5 md:h-80 bg-pink-100 overflow-hidden rounded-lg shadow-lg mb-8">
+        <img src="./image 1.png" alt="Photo 1" class="absolute inset-0 w-full h-full object-cover">
+        <img src="./image 2.png" alt="Photo 2" class="absolute inset-0 w-full h-full object-cover hidden">
+        <img src="./image 4.png" alt="Photo 3" class="absolute inset-0 w-full h-full object-cover hidden">
+        <img src="image 5.png" alt="Photo 4" class="absolute inset-0 w-full h-full object-cover hidden">
+    </div>
+
+    <!-- Heartwarming Messages -->
+    <section class="text-center mb-8 px-4">
+        <p class="text-xl md:text-2xl text-purple-800 leading-relaxed fade-in">
+            "Your smile brightens even the darkest days. Thank you for being you."
+        </p>
+        <p class="text-xl md:text-2xl text-pink-800 leading-relaxed mt-4 fade-in">
+            "You inspire me to reach for the stars and never give up."
+        </p>
+        <p class="text-xl md:text-2xl text-green-800 leading-relaxed mt-4 fade-in">
+            "May your birthday be as beautiful and magical as you are."
+        </p>
+        <p class="text-xl md:text-2xl text-blue-800 leading-relaxed mt-4 fade-in">
+            "I feel so lucky to have someone as wonderful as you in my life."
+        </p>
+        <p class="text-xl md:text-2xl text-yellow-800 leading-relaxed mt-4 fade-in">
+            "You are the kind of person who makes the world a better place just by being in it."
+        </p>
+        <p class="text-xl md:text-2xl text-red-800 leading-relaxed mt-4 fade-in">
+            "Every moment spent with you is a moment I treasure. Thank you for being amazing."
+        </p>
+        <p class="text-xl md:text-2xl text-cyan-800 leading-relaxed mt-4 fade-in">
+            "Happy Birthday to someone who deserves all the love, happiness, and joy in the world."
+        </p>
+    </section>
+
+    <!-- Social Media Icons (Larger) -->
+    <div class="flex justify-center space-x-8 mt-8 px-4">
+        <a href="https://web.facebook.com/profile.php?id=61562480667719" target="_blank" class="text-6xl text-blue-600 hover:text-blue-800">
+            <i class="fab fa-facebook-square"></i>
+        </a>
+        <a href="https://wa.me/+2349161903584" target="_blank" class="text-6xl text-green-600 hover:text-green-800">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center mt-8 px-4">
+        <p class="text-pink-600 font-semibold">
+            With all my heart, <span class="font-bold text-purple-700">Your biggest admirer Badmus Eniola💖</span>
+        </p>
+    </footer>
+
+    <!-- JavaScript for Carousel -->
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('#carousel img');
+        setInterval(() => {
+            images[currentIndex].classList.add('hidden');
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.remove('hidden');
+        }, 3000);
+    </script>
+</body>
+</html>
